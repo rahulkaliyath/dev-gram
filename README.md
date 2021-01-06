@@ -23,15 +23,15 @@ Dev Gram is a social network site for developers
 * Make sure you have <span style="font-size:larger;">[nodejs](https://nodejs.org/en/download/) </span> installed in your system
 * Clone the repository and cd into `dev-gram`
     ``` bash 
-        git clone https://github.com/rahulkaliyath/dev-gram.git
-        cd dev-gram 
+    git clone https://github.com/rahulkaliyath/dev-gram.git
+    cd dev-gram 
      ``` 
 * Install all the dependencies
     ``` node
     npm install
     ```
 
-* Run the following commands to concurrently run client server and backend server
+* Run the following command to concurrently run client server and backend server
   ``` node
   npm run dev
   ```
