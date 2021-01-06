@@ -27,11 +27,11 @@ Dev Gram is a social network site for developers
     cd dev-gram 
      ``` 
 * Install all the dependencies
-    ``` node
+    ``` js
     npm install
     ```
 
 * Run the following command to concurrently run client server and backend server
-  ``` node
+  ``` js
   npm run dev
   ```
