@@ -29,7 +29,7 @@ export const getPost = postId => async dispatch => {
 
     try{
         
-     const resp = await axios.get(`http://localhost:5000/api/posts/${postId}`);
+     const resp = await axios.get(`api/posts/${postId}`);
 
      dispatch({
          type: postActionTypes.GET_POST,
@@ -156,7 +156,7 @@ export const addComment = (postId,formData) => async dispatch => {
         }
     };
     try{
-     const resp = await axios.post(`http://localhost:5000/api/posts/comment/${postId}`,formData,config);
+     const resp = await axios.post(`api/posts/comment/${postId}`,formData,config);
 
      dispatch({
          type: postActionTypes.ADD_COMMENT,
@@ -182,7 +182,7 @@ export const addComment = (postId,formData) => async dispatch => {
 export const deleteComment = (postId,commentId) => async dispatch => {
     
     try{
-      await axios.delete(`http://localhost:5000/api/posts/comment/${postId}/${commentId}`);
+      await axios.delete(`api/posts/comment/${postId}/${commentId}`);
 
      dispatch({
          type: postActionTypes.REMOVE_COMMENT,
