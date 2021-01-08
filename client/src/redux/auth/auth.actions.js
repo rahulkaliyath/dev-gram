@@ -23,7 +23,7 @@ export const loadUser = () => async dispatch => {
         });
 
     } catch (error) {
-        console.log(error);
+        
         dispatch({
             type: authActionTypes.AUTH_ERROR
         });
@@ -57,7 +57,7 @@ export const registerUser = (name,email,password) => async dispatch => {
         if(errors){
             errors.forEach(error => dispatch(setAlert(error.msg,'danger',5000)));
         }
-        console.log(error)
+        
         dispatch({
             type: authActionTypes.REGISTER_FAIL
         });
@@ -93,7 +93,7 @@ export const loginUser = (email,password) => async dispatch => {
         if(errors){
             errors.forEach(error => dispatch(setAlert(error.msg,'danger',5000)));
         }
-        console.log(error)
+        
         dispatch({
             type: authActionTypes.LOGIN_FAIL
         });

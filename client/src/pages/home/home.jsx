@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 const Home = ({isAuthenticated}) => {
 
   if(isAuthenticated){
-    console.log("ergkegmrbkzek",isAuthenticated)
+    
     return <Redirect to='/dashboard' />
   }
 

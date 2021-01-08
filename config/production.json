@@ -1,0 +1,4 @@
+{
+    "MONGO_URI":"mongodb+srv://user1:user123@cluster0.u7x8t.mongodb.net/dev_gram?retryWrites=true&w=majority",
+    "jwtSecretKey": "secretsecret"
+}

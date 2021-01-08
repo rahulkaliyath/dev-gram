@@ -66,7 +66,7 @@ const postReducer = (state = INITIAL_STATE, action) => {
                     comment => comment._id !== action.payload
                 );
 
-                console.log(check,"rgaegesrgaerg")
+                
                 return{
                     ...state,
                     post : {...state.post, comments : state.post.comments.filter(

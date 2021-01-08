@@ -28,7 +28,7 @@ export const getPosts = () => async dispatch => {
 export const getPost = postId => async dispatch => {
 
     try{
-        console.log(postId,"rsgezgrrgegrzergz");
+        
      const resp = await axios.get(`http://localhost:5000/api/posts/${postId}`);
 
      dispatch({

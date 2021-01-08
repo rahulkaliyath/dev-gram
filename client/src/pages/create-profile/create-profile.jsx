@@ -48,7 +48,6 @@ const CreateProfile = ({createProfile, history ,edit}) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        console.log(formData)
         createProfile(formData,history,false);
     }
 

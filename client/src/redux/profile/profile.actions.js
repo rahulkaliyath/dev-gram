@@ -45,8 +45,7 @@ export const createProfile = (formData, history, edit =false) => async dispatch 
     }
     catch(error){
         const errors = error.response.data.errors;
-        console.log(error.response)
-        console.log(errors)
+        
         if(errors){
             errors.forEach(error => dispatch(setAlert(error.msg,'danger',5000)));
         }
@@ -81,8 +80,6 @@ export const addExperience = (formData, history ) => async dispatch => {
     }
     catch(error){
         const errors = error.response.data.errors;
-        console.log(error.response)
-        console.log(errors)
         if(errors){
             errors.forEach(error => dispatch(setAlert(error.msg,'danger',5000)));
         }
@@ -117,8 +114,6 @@ export const addEducation = (formData, history ) => async dispatch => {
     }
     catch(error){
         const errors = error.response.data.errors;
-        console.log(error.response)
-        console.log(errors)
         if(errors){
             errors.forEach(error => dispatch(setAlert(error.msg,'danger',5000)));
         }

@@ -253,7 +253,7 @@ router.delete('/comment/:post_id/:comment_id', auth, async (req,res) => {
         if (error.kind == 'ObjectId'){
             return res.status(400).json({msg: "Post Not Available"});
          }
-         console.log(error)
+        
         res.status(500).json({error : "Server Error"})
     }
 });
