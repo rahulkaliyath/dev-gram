@@ -10,9 +10,9 @@ export const loadUser = () => async dispatch => {
     if(localStorage.token){
         setAuthToken(localStorage.token)
     }
-    else{
-        throw  'ERROR';
-    }
+    // else{
+    //     throw  'ERROR';
+    // }
     
         
         const res = await axios.get('api/auth');
@@ -23,6 +23,7 @@ export const loadUser = () => async dispatch => {
         });
 
     } catch (error) {
+        console.log(error);
         dispatch({
             type: authActionTypes.AUTH_ERROR
         });
@@ -80,6 +81,8 @@ export const loginUser = (email,password) => async dispatch => {
             type: authActionTypes.LOGIN_SUCCESS,
             payload:resp.data
         });
+
+        dispatch(loadUser());
         
 
 

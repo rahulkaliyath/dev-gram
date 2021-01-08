@@ -1,5 +1,5 @@
 import React from 'react';
-import {Redirect, Route, Switch} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Navbar from './components/navbar/navbar';
 import Home from './pages/home/home';
@@ -16,6 +16,8 @@ import AddExperience from './components/add-exp-edu/addExperience';
 import AddEducation from './components/add-exp-edu/addEducation';
 import Developers from './pages/developer/developer';
 import profile from './components/profile/profile';
+import Posts from './pages/post/post';
+import singlePost from './pages/post/singlePost';
 import './App.css';
 
 class App extends React.Component{
@@ -27,10 +29,7 @@ class App extends React.Component{
     this.props.loadUser();
   }
 
-  componentDidUpdate(){
-    this.props.loadUser();
-  }
-
+ 
   render(){
   return (
     <div>
@@ -47,6 +46,8 @@ class App extends React.Component{
             <Route exact path='/developers'  component={Developers}/>
             <Route exact path='/profile/:id'  component={profile}/>
             <PrivateRoute exact path='/dashboard'  component={Dashboard}/>
+            <PrivateRoute exact path='/posts'  component={Posts}/>
+            <PrivateRoute exact path='/posts/:postId'  component={singlePost}/>
             <PrivateRoute exact path='/create-profile'  component={CreateProfile}/>
             <PrivateRoute exact path='/edit-profile'  component={EditProfile}/>
             <PrivateRoute exact path='/add-experience'  component={AddExperience}/>

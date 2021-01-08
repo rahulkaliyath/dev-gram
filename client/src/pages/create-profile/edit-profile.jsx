@@ -5,21 +5,6 @@ import {createProfile} from '../../redux/profile/profile.actions';
 import {getCurrentProfile} from '../../redux/profile/profile.actions';
 
 
-const initialState = {
-    company: '',
-    website: '',
-    location: '',
-    status: '',
-    skills: '',
-    githubusername: '',
-    bio: '',
-    twitter: '',
-    facebook: '',
-    linkedin: '',
-    youtube: '',
-    instagram: ''
-  };
-
 
 const EditProfile = ({createProfile, history , getCurrentProfile, profile}) => {
 

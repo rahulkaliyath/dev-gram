@@ -39,7 +39,7 @@ const Register = ({setAlert,registerUser,isAuthenticated}) => {
     }
 
     return(
-      <section className='container'>
+      
     <div>
          <h1 className="large text-primary">Sign Up</h1>
       <p className="lead"><i className="fas fa-user"></i> Create Your Account</p>
@@ -81,7 +81,6 @@ const Register = ({setAlert,registerUser,isAuthenticated}) => {
         Already have an account? <Link to="/login">Sign In</Link>
       </p>
     </div>
-    </section>
     )
 };
 

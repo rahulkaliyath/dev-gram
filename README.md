@@ -17,6 +17,9 @@ Dev Gram is a social network site for developers
 * React Hooks
 * Node.js
 * Express.js
+* MongoDB
+* Mongoose
+
 
 ## Installation
 

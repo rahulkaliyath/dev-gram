@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import WithSpinner from '../../components/with-spinner/with-spinner';
 import ProfileItem from '../../components/profile-Item/profileItem';

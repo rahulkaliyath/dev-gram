@@ -229,9 +229,7 @@ export const getAllProfiles = () => async dispatch => {
 
   }
   catch(error){
-      const errors = error.response.data.errors;
-
-    
+          
       dispatch({
           type: profileActionTypes.PROFILE_ERROR,
           payload: {msg:error.response.data.msg, status : error.response.status}
@@ -241,7 +239,7 @@ export const getAllProfiles = () => async dispatch => {
 
 
 export const getProfileById = userId => async dispatch => {
-    console.log(userId)
+    
     try{
      const resp = await axios.get(`/api/profile/user/${userId}`);
 
@@ -252,8 +250,6 @@ export const getProfileById = userId => async dispatch => {
 
  }
  catch(error){
-     const errors = error.response.data.errors;
-
    
      dispatch({
          type: profileActionTypes.PROFILE_ERROR,
