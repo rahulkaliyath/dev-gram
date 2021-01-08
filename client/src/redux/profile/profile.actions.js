@@ -80,6 +80,8 @@ export const addExperience = (formData, history ) => async dispatch => {
     }
     catch(error){
         const errors = error.response.data.errors;
+
+        console.log(error.message,{...error})
         if(errors){
             errors.forEach(error => dispatch(setAlert(error.msg,'danger',5000)));
         }

@@ -19,7 +19,7 @@ router.post('/',[
     const errors = validationResult(req);
 
     if(!errors.isEmpty()){
-        return res.status(400).json({error: errors.array()});
+        return res.status(400).json({errors: errors.array()});
     }
 
     const user = await User.findById(req.user.id).select('-password');
@@ -185,7 +185,7 @@ router.post('/comment/:post_id',[
 
     if(!errors.isEmpty()){
         console.log("erro")
-        return res.status(400).json({error: errors.array()});
+        return res.status(400).json({errors: errors.array()});
     }
 
     

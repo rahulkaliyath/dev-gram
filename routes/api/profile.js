@@ -190,7 +190,7 @@ auth ,
     const errors = validationResult(req);
 
     if(!errors.isEmpty()){
-        return res.status(400).json({error : errors.array()});
+        return res.status(400).json({errors : errors.array()});
     }
 
     const {
@@ -214,7 +214,7 @@ auth ,
     }
 
     try {
-
+        console.log(req.body,"esgeg");
         const profile = await Profile.findOne({user : req.user.id});
         profile.experience.unshift(newExp);
         
@@ -261,10 +261,10 @@ router.delete('/experience/:experience_id', auth,  async (req,res) => {
 router.put('/education', [
     auth ,
     [
-        check('school','title is required').notEmpty(),
-        check('fieldofstudy','from is required').notEmpty(),
-        check('from','company is required').notEmpty(),
-        check('degree','from is required').notEmpty()
+        check('school','school is required').notEmpty(),
+        check('fieldofstudy','fieldofstudy is required').notEmpty(),
+        check('from','from is required').notEmpty(),
+        check('degree','degree is required').notEmpty()
     
     ]]
     , async (req,res) =>{
@@ -272,7 +272,7 @@ router.put('/education', [
         const errors = validationResult(req);
     
         if(!errors.isEmpty()){
-            return res.status(400).json({error : errors.array()});
+            return res.status(400).json({errors : errors.array()});
         }
     
         const {
